@@ -7,7 +7,7 @@ from django.views.generic import RedirectView
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', 'views.home', name='home'),
+    url(r'^$', 'starter.views.home', name='home'),
     #url(r'^your_app/', include(your_app.urls)),
     url(r'^admin/', include(admin.site.urls)),
 )
