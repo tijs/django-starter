@@ -1,13 +1,15 @@
 Django==1.4.3
-Fabric==1.5.3
-Pillow==1.7.8
-South==0.7.6
-Unipath==0.2.1
+Fabric==1.5.3 # Really only used locally but i include them here anyway
+Pillow==1.7.8 # An easier to install version of PIL
+South==0.7.6 # Migrations! please use them
+Unipath==0.2.1 # For nice path setup in settings
 django-appconf==0.6
-django-compressor==1.2
+django-compressor==1.2 # (Pre-)compile your CSS and Javascript
 paramiko==1.9.0
-psycopg2==2.4.6
+psycopg2==2.4.6 # I use Postgres, not needed if you use MySQL or something else
 pycrypto==2.6
-raven==3.1.9
+raven==3.1.9 # I push all my error notifications to http://getsentry.com
 six==1.2.0
+virtual-node==0.0.1 # dependency for Less
+virtual-less==0.0.1-1.3.3 # used to compile Less to CSS on the fly
 wsgiref==0.1.2
