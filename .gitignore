@@ -1,2 +1,5 @@
 *.pyc
+# where i keep my virtualenv files
 venv
+# where i keep my PyCharm config
+.idea
