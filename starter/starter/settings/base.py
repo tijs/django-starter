@@ -131,6 +131,7 @@ INSTALLED_APPS = (
     'south',
     'raven.contrib.django',
     'compressor',
+    'easy_thumbnails',
 
     # Apps
     'starter' # your 'core' app
@@ -181,8 +182,8 @@ LOGGING = {
         },
     }
 
-# django-compressor
+# django-compressor, default filter settings are fine so this is all the config we need
 COMPRESS_OFFLINE = True # make sure we get pre-compressed static files on production (looks at your DEBUG setting)
 COMPRESS_PRECOMPILERS = (
-    ('text/less', 'lessc {infile} {outfile}'), # i only use less usually, feel free to add your own
-    )
+    ('text/x-sass', 'pyscss {infile} > {outfile}'),
+)

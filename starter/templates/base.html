@@ -9,9 +9,9 @@
 
     <title>{% block title %}{% endblock %}</title>
 
-    <!-- Your Less based stylesheet -->
+    <!-- Your Sass based stylesheet -->
     {% compress css %}
-    <link rel="stylesheet" href="{{ STATIC_URL }}less/main.less" type="text/less">
+    <link rel="stylesheet" href="{{ STATIC_URL }}sass/main.scss" type="text/x-sass">
     {% endcompress %}
 
     <!-- Google Analytics -->
