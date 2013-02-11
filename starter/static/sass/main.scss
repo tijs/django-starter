@@ -1,3 +1,20 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/typography/lists";
+
+footer {
+    @include border-radius(5px);
+    @include box-shadow();
+}
+
+header ul.menu {
+    @include inline-block-list-container();
+
+    li {
+        @include inline-block-list-item();
+    }
+}
+
 .selector {
     a {
         display: block;

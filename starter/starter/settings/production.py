@@ -34,3 +34,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 25
 DEFAULT_FROM_EMAIL = 'email@example.com' # change this to something that works
+
+# django-compressor, for the production env do turn on compression of css
+COMPRESS_PRECOMPILERS = (
+    ('text/x-sass', 'pyscss --load-path=%s {infile} > {outfile}' % str(PROJECT_DIR.child('static').child('sass'))),
+)

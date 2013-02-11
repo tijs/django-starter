@@ -185,5 +185,5 @@ LOGGING = {
 # django-compressor, default filter settings are fine so this is all the config we need
 COMPRESS_OFFLINE = True # make sure we get pre-compressed static files on production (looks at your DEBUG setting)
 COMPRESS_PRECOMPILERS = (
-    ('text/x-sass', 'pyscss {infile} > {outfile}'),
+    ('text/x-sass', 'pyscss --no-compress --load-path=%s {infile} > {outfile}' % str(PROJECT_DIR.child('static').child('sass'))),
 )
